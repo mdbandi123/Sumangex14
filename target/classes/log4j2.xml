@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="SBCLogConfig">
+	<Appenders>
+		<File name="FILE1"
+			fileName="src/main/resources/files/simple_app.log">
+			<PatternLayout
+				pattern="%p - %d{yyyy-MM-dd HH:mm:ss,SSS} - %F - %m\n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<Logger name="LOGGER1" additivity="false" level="INFO">
+			<AppenderRef ref="FILE1" />
+		</Logger>
+	</Loggers>
+</Configuration>
