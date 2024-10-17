@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration name="SBCLogConfig">
 	<Appenders>
-
 		<File name="FILE1"
 			fileName="src/main/resources/files/simple_app.log">
 			<PatternLayout
 				pattern="%p - %d{yyyy-MM-dd HH:mm:ss,SSS} - %F - %m\n" />
 		</File>
-
 		<RollingFile name="ROLLFILE1"
 			fileName="src/main/resources/files/traparray.log"
 			filePattern="src/main/resources/files/traparray-%d{yyyy-MM-dd_HH-mm-ss}.log">
@@ -17,7 +15,6 @@
 			</Policies>
 			<DefaultRolloverStrategy />
 		</RollingFile>
-
 		<RollingFile name="ROLLFILE2"
 			fileName="src/main/resources/files/checkstr.log"
 			filePattern="src/main/resources/files/checkstr-%i.log">
@@ -28,22 +25,24 @@
 			</Policies>
 			<DefaultRolloverStrategy max="10" />
 		</RollingFile>
-
+		<File name="HTMLFILE"
+			fileName="src/main/resources/files/vendo_log.html">
+			<HTMLLayout />
+		</File>
 	</Appenders>
 
 	<Loggers>
-
 		<Logger name="LOGGER1" additivity="false" level="INFO">
 			<AppenderRef ref="FILE1" />
 		</Logger>
-
 		<Logger name="LOGGER2" additivity="false" level="ERROR">
 			<AppenderRef ref="ROLLFILE1" />
 		</Logger>
-
 		<Logger name="LOGGER3" additivity="false" level="INFO">
 			<AppenderRef ref="ROLLFILE2" />
 		</Logger>
-
+		<Logger name="LOGGER4" additivity="false" level="INFO">
+			<AppenderRef ref="HTMLFILE" />
+		</Logger>
 	</Loggers>
 </Configuration>
