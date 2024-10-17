@@ -1,0 +1,10 @@
+org/acumen/training/codes/exceptions/LetterSizeException.class
+org/acumen/training/codes/Coin.class
+org/acumen/training/codes/TrapArray.class
+org/acumen/training/codes/SimpleApp.class
+org/acumen/training/codes/exceptions/BadIndexException.class
+org/acumen/training/codes/VendingMachine.class
+org/acumen/training/codes/exceptions/ElementDecimalException.class
+org/acumen/training/codes/exceptions/ElementCharException.class
+org/acumen/training/codes/ChekcStr.class
+org/acumen/training/codes/exceptions/InvalidSizeException.class
